@@ -72,6 +72,7 @@ public class Robot : MonoBehaviour
             isDead = true;
             robot.Play("Die");
             StartCoroutine("DestroyRobot");
+            Game.RemoveEnemy();
             GetComponent<AudioSource>().PlayOneShot(deathSound);
         }
         else
