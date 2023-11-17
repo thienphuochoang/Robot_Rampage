@@ -32,6 +32,8 @@ public class GameUI : MonoBehaviour
     [SerializeField]
     Sprite blueReticle;
     [SerializeField]
+    Sprite greenReticle;
+    [SerializeField]
     Image reticle;
     public void UpdateReticle()
     {
@@ -45,6 +47,9 @@ public class GameUI : MonoBehaviour
                 break;
             case Constants.AssaultRifle:
                 reticle.sprite = blueReticle;
+                break;
+            case Constants.Laser:
+                reticle.sprite = greenReticle;
                 break;
             default:
                 return;
